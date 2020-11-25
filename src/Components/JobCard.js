@@ -103,11 +103,13 @@ function JobCard({ variants, job, canApply }) {
 									<Icon src={ExpSVG} />
 									{job.jobOpeningInfo.jobType}
 								</Details>
-								{/* <DotIcon src={DotSVG} /> */}
-								{/* <Details>
+								<DotIcon src={DotSVG} />
+								<Details>
 									<Icon src={SalarySVG} />
-									{salary}
-								</Details> */}
+									{
+										(job.jobOpeningInfo.salary) ? (<>{job.jobOpeningInfo.salary.from} - {job.jobOpeningInfo.salary.to}</>) : (<>Not Specified</>)
+									}
+								</Details>
 								<DotIcon src={DotSVG} />
 								<Details style={{textTransform: 'capitalize'}}>
 									<Icon src={LocationSVG} />
